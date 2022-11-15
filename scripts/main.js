@@ -32,41 +32,41 @@ function readQuote() {
 }
 readQuote()        //calling the function
 
-function writeHikes() {
-    //define a variable for the collection you want to create in Firestore to populate data
-    var hikesRef = db.collection("hikes");
+// function writeHikes() {
+//     //define a variable for the collection you want to create in Firestore to populate data
+//     var hikesRef = db.collection("hikes");
 
-    hikesRef.add({
-        code: "BBY01",
-        name: "Burnaby Lake Park Trail",    //replace with your own city?
-        city: "Burnaby",
-        province: "BC",
-        level: "easy",
-        length: "10",
-        details: "Elmo goes here regularly",
-        last_updated: firebase.firestore.FieldValue.serverTimestamp()
-    });
-    hikesRef.add({
-        code: "AM01",
-        name: "Buntzen Lake Trail Trail",    //replace with your own city?
-        city: "Anmore",
-        province: "BC",
-        level: "moderate",
-        length: "10.5",
-        details: "Elmo goes here regularly",
-        last_updated: firebase.firestore.FieldValue.serverTimestamp()
-    });
-    hikesRef.add({
-        code: "NV01",
-        name: "Mount Seymoure Trail",    //replace with your own city?
-        city: "North Vancouver",
-        province: "BC",
-        level: "hard",
-        length: "8.2",
-        details: "Elmo goes here regularly",
-        last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
-    });
-}
+//     hikesRef.add({
+//         code: "BBY01",
+//         name: "Burnaby Lake Park Trail",    //replace with your own city?
+//         city: "Burnaby",
+//         province: "BC",
+//         level: "easy",
+//         length: "10",
+//         details: "Elmo goes here regularly",
+//         last_updated: firebase.firestore.FieldValue.serverTimestamp()
+//     });
+//     hikesRef.add({
+//         code: "AM01",
+//         name: "Buntzen Lake Trail Trail",    //replace with your own city?
+//         city: "Anmore",
+//         province: "BC",
+//         level: "moderate",
+//         length: "10.5",
+//         details: "Elmo goes here regularly",
+//         last_updated: firebase.firestore.FieldValue.serverTimestamp()
+//     });
+//     hikesRef.add({
+//         code: "NV01",
+//         name: "Mount Seymoure Trail",    //replace with your own city?
+//         city: "North Vancouver",
+//         province: "BC",
+//         level: "hard",
+//         length: "8.2",
+//         details: "Elmo goes here regularly",
+//         last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
+//     });
+// }
 
 function displayCards(collection) {
     let cardTemplate = document.getElementById("hikeCardTemplate");
@@ -83,7 +83,7 @@ function displayCards(collection) {
                 //update title and text and image
                 newcard.querySelector('.card-title').innerHTML = title;
                 newcard.querySelector('.card-text').innerHTML = details;
-                newcard.querySelector('.card-image').src = `./images/${hikeID}.jpg`; //Example: NV01.jpg
+                newcard.querySelector('.card-image').src = `./images/${hikeID}.jepg`; //Example: NV01.jpg
 
                 //give unique ids to all elements for future use
                 // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
